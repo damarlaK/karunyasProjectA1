@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Whitecirclesschool.demo.TestScripts.DrList_Test">
+      <class name="com.Whitecirclesschool.demo.TestScripts.DrSS_Test">
         <methods>
+          <include name="validateButton1StevenSpelbergpage"/>
+          <include name="validateButton2StevenSpelbergpage"/>
           <include name="close"/>
+          <include name="validateButton3StevenSpelbergpage"/>
           <include name="openBrowser"/>
-          <include name="validatelinktext"/>
         </methods>
-      </class> <!-- com.Whitecirclesschool.demo.TestScripts.DrList_Test -->
+      </class> <!-- com.Whitecirclesschool.demo.TestScripts.DrSS_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

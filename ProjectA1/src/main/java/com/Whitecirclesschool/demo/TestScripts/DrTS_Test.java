@@ -46,9 +46,7 @@ public class DrTS_Test {
 		lp.applicationlogin();
 		wp.LetsBtn();
 		pA1.ProjA1();
-
-		dL.clDrStevenSpieberg();
-		Thread.sleep(3000);
+		dL.clTimShort();
 		// Verify Dr Tim Short page
 		actual = ts.DrTimShortlink().getText();
 		expected = "Dr Tim Short";
@@ -57,118 +55,151 @@ public class DrTS_Test {
 	}
 
 	@Test(priority = 1)
-	public void validateTitle1onevenspelbergpage() throws InterruptedException {
-
-		actual = ts.tsTitle1().getText();
-		expected = "";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+	public void validateTitle1TomShortPage() {
+		boolean titlePresent = true;
+		int titleLength = ts.tsTitle1().getText().length();
+		if(titleLength<6) {
+			titlePresent = false;
+		}
+		
+		Assert.assertTrue(titlePresent);
 
 	}
 
 	@Test(priority = 2)
-	public void validateTitle2onevenspelbergpage() throws InterruptedException {
+	public void validateTitle2TomShortPage() {
 
-		actual = ts.tsTitle2().getText();
-		expected = "";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+			boolean titlePresent = true;
+			int titleLength = ts.tsTitle2().getText().length();
+			if(titleLength<6) {
+				titlePresent = false;
+			}
+			
+			Assert.assertTrue(titlePresent);
 
-	}
+			}
 
 	@Test(priority = 3)
-	public void validateTitle3onevenspelbergpage() throws InterruptedException {
+	public void validateTitle3TomShortPage() {
+			boolean titlePresent = true;
+			int titleLength = ts.tsTitle3().getText().length();
+			if(titleLength<6) {
+				titlePresent = false;
+			}
+			
+			Assert.assertTrue(titlePresent);
 
-		actual = ts.tsTitle3().getText();
-		expected = "";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
-
-	}
+		}
 
 	@Test(priority = 4)
-	public void validateDesp1onevenspelbergpage() throws InterruptedException {
+	public void validateDesp1TimShortPage() {
 
-		actual = ts.tsDesp1().getText();
-		expected = "Lorem ipsum dolor sit amet, ut nec eros metus fames. Quam dictum a dui tincidunt quis.";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean DescriptionPresent = true;
+		int Descriptionlength = ts.tsDesp1().getText().length();
+		if(Descriptionlength<14) {
+			DescriptionPresent = false;
+		}
+		Assert.assertTrue(DescriptionPresent);
 
 	}
 
 	@Test(priority = 5)
-	public void validateDesp2onevenspelbergpage() throws InterruptedException {
+	public void validateDesp2TimShortpage() throws InterruptedException {
 
-		actual = ts.tsDesp2().getText();
-		expected = "Lorem ipsum dolor sit amet, ut nec eros metus fames. Quam dictum a dui tincidunt quis.";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean DescriptionPresent = true;
+		int Descriptionlength = ts.tsDesp2().getText().length();
+		if(Descriptionlength<14) {
+			DescriptionPresent = false;
+		}
+		Assert.assertTrue(DescriptionPresent);
 
 	}
-
 	@Test(priority = 6)
-	public void validateDesp3onevenspelbergpage() throws InterruptedException {
+	public void validateDesp3TimShortgpage() throws InterruptedException {
 
-		actual = ts.tsDesp3().getText();
-		expected = "Lorem ipsum dolor sit amet, ut nec eros metus fames. Quam dictum a dui tincidunt quis.";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean DescriptionPresent = true;
+		int Descriptionlength = ts.tsDesp3().getText().length();
+		if(Descriptionlength<14) {
+			DescriptionPresent = false;
+		}
+		Assert.assertTrue(DescriptionPresent);
 
 	}
-
 	@Test(priority = 7)
-	public void validateCreate1onevenspelbergpage() throws InterruptedException {
+	public void validateCreate1TimShortpage() throws InterruptedException {
 
-		actual = ts.tsCreate1().getText();
-		expected = "Invalid Date";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean createDate = ts.tsCreate1().getText().contains("GMT");
+		Assert.assertTrue(createDate);
 
 	}
+
 
 	@Test(priority = 8)
-	public void validateCreate2onevenspelbergpage() throws InterruptedException {
+	public void validateCreate2TimShortpage() throws InterruptedException {
 
-		actual = ts.tsCreate2().getText();
-		expected = "Invalid Date";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean createDate = ts.tsCreate2().getText().contains("GMT");
+		Assert.assertTrue(createDate);
 
 	}
+
 
 	@Test(priority = 9)
-	public void validateCreate3onevenspelbergpage() throws InterruptedException {
+	public void validateCreate3TimShortpage() throws InterruptedException {
 
-		actual = ts.tsCreate3().getText();
-		expected = "Invalid Date";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean createDate = ts.tsCreate3().getText().contains("GMT");
+		Assert.assertTrue(createDate);
 
 	}
+
 
 	@Test(priority = 10)
-	public void validateButton1onevenspelbergpage() throws InterruptedException {
+	public void validateButton1TimShortpage()  {
 
-		boolean buttonenable1 = ts.tsbutton1().isEnabled();
-		Assert.assertTrue(buttonenable1);
+			boolean alertPresent = true;
+			ts.tsbutton1();
+			try {
+				driver.switchTo().alert().accept();
 
-	}
+			} catch (Exception e) {
+				alertPresent = false;
+
+			}
+			Assert.assertTrue(alertPresent);
+
+		}
 
 	@Test(priority = 11)
-	public void validateButton2onevenspelbergpage() throws InterruptedException {
+	public void validateButton2TimShortpage() 
+	{
+		
+			boolean alertPresent = true;
+			ts.tsbutton1();
+			try {
+				driver.switchTo().alert().accept();
 
-		boolean buttonenable2 = ts.tsbutton2().isEnabled();
-		Assert.assertTrue(buttonenable2);
+			} catch (Exception e) {
+				alertPresent = false;
 
-	}
+			}
+			Assert.assertTrue(alertPresent);
+
+		}
+	
 
 	@Test(priority = 12)
-	public void validateButton3onevenspelbergpage() throws InterruptedException {
+	public void validateButton3TimShortpage() {
+			boolean alertPresent = true;
+			ts.tsbutton1();
+			try {
+				driver.switchTo().alert().accept();
 
-		boolean buttonenable3 = ts.tsbutton3().isEnabled();
-		Assert.assertTrue(buttonenable3);
+			} catch (Exception e) {
+				alertPresent = false;
 
-	}
+			}
+			Assert.assertTrue(alertPresent);
+
+		}
 
 	@AfterTest
 	public void close() {

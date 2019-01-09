@@ -57,116 +57,149 @@ public class DrSS_Test {
 	}
 
 	@Test(priority = 1)
-	public void validateTitle1onevenspelbergpage() throws InterruptedException {
+	public void validateTitle1Stevenspelbergpage() throws InterruptedException {
 
-		actual = ss.ssTitle1().getText();
-		expected = "This is awesome";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean titlePresent = true;
+		int titleLength = ss.ssTitle1().getText().length();
+		if (titleLength < 6) {
+			titlePresent = false;
+		}
+
+		Assert.assertTrue(titlePresent);
 
 	}
 
 	@Test(priority = 2)
-	public void validateTitle2onevenspelbergpage() throws InterruptedException {
+	public void validateTitle2Stevenspelbergpage() throws InterruptedException {
 
-		actual = ss.ssTitle2().getText();
-		expected = "This is awesome";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean titlePresent = true;
+		int titleLength = ss.ssTitle2().getText().length();
+		if (titleLength < 6) {
+			titlePresent = false;
+		}
+
+		Assert.assertTrue(titlePresent);
 
 	}
 
 	@Test(priority = 3)
-	public void validateTitle3onevenspelbergpage() throws InterruptedException {
+	public void validateTitle3Stevenspelbergpage() throws InterruptedException {
 
-		actual = ss.ssTitle3().getText();
-		expected = "This is awesome";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean titlePresent = true;
+		int titleLength = ss.ssTitle3().getText().length();
+		if (titleLength < 6) {
+			titlePresent = false;
+		}
+
+		Assert.assertTrue(titlePresent);
 
 	}
 
 	@Test(priority = 4)
-	public void validateDesp1onevenspelbergpage() throws InterruptedException {
+	public void validateDesp1Stevenspelbergpage() {
 
-		actual = ss.ssDesp1().getText();
-		expected = "Lorem ipsum dolor sit amet, ut nec eros metus fames. Quam dictum a dui tincidunt quis.";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean DescriptionPresent = true;
+		int DescriptionLength = ss.ssDesp1().getText().length();
+		if (DescriptionLength < 14) {
+			DescriptionPresent = false;
+		}
+
+		Assert.assertTrue(DescriptionPresent);
 
 	}
 
 	@Test(priority = 5)
-	public void validateDesp2onevenspelbergpage() throws InterruptedException {
+	public void validateDesp2Stevenspelbergpage() {
 
-		actual = ss.ssDesp2().getText();
-		expected = "Lorem ipsum dolor sit amet, ut nec eros metus fames. Quam dictum a dui tincidunt quis.";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean DescriptionPresent = true;
+		int DescriptionLength = ss.ssDesp2().getText().length();
+		if (DescriptionLength < 14) {
+			DescriptionPresent = false;
+		}
+
+		Assert.assertTrue(DescriptionPresent);
 
 	}
 
 	@Test(priority = 6)
-	public void validateDesp3onevenspelbergpage() throws InterruptedException {
+	public void validateDesp3onevenspelbergpage() {
 
-		actual = ss.ssDesp3().getText();
-		expected = "Lorem ipsum dolor sit amet, ut nec eros metus fames. Quam dictum a dui tincidunt quis.";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean DescriptionPresent = true;
+		int DescriptionLength = ss.ssDesp3().getText().length();
+		if (DescriptionLength < 14) {
+			DescriptionPresent = false;
+		}
+
+		Assert.assertTrue(DescriptionPresent);
 
 	}
 
 	@Test(priority = 7)
-	public void validateCreate1onevenspelbergpage() throws InterruptedException {
+	public void validateCreate1Stevenspelbergpage() {
 
-		actual = ss.ssCreate1().getText();
-		expected = "Mon Apr 23 2018 05:30:00 GMT+0530 (India Standard Time)";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean createDate = ss.ssCreate1().getText().contains("GMT");
+		Assert.assertTrue(createDate);
 
 	}
 
 	@Test(priority = 8)
-	public void validateCreate2onevenspelbergpage() throws InterruptedException {
+	public void validateCreate2Stevenspelbergpage() {
 
-		actual = ss.ssCreate2().getText();
-		expected = "Mon Apr 23 2018 05:30:00 GMT+0530 (India Standard Time)";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean createDate = ss.ssCreate2().getText().contains("GMT");
+		Assert.assertTrue(createDate);
 
 	}
 
 	@Test(priority = 9)
-	public void validateCreate3onevenspelbergpage() throws InterruptedException {
+	public void validateCreate3Stevenspelbergpage() {
 
-		actual = ss.ssCreate3().getText();
-		expected = "Mon Apr 23 2018 05:30:00 GMT+0530 (India Standard Time)";
-		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		boolean createDate = ss.ssCreate3().getText().contains("GMT");
+		Assert.assertTrue(createDate);
 
 	}
 
 	@Test(priority = 10)
-	public void validateButton1onevenspelbergpage() throws InterruptedException {
+	public void validateButton1StevenSpelbergpage() {
+		boolean alertPresent = true;
+		ss.ssbutton1();
+		try {
+			driver.switchTo().alert().accept();
 
-		boolean buttonenable1 = ss.ssbutton1().isEnabled();
-		Assert.assertTrue(buttonenable1);
+		} catch (Exception e) {
+			alertPresent = false;
+
+		}
+		Assert.assertTrue(alertPresent);
 
 	}
 
 	@Test(priority = 11)
-	public void validateButton2onevenspelbergpage() throws InterruptedException {
+	public void validateButton2StevenSpelbergpage() {
+		boolean alertPresent = true;
+		ss.ssbutton2();
+		try {
+			driver.switchTo().alert().accept();
 
-		boolean buttonenable2 = ss.ssbutton2().isEnabled();
-		Assert.assertTrue(buttonenable2);
+		} catch (Exception e) {
+			alertPresent = false;
+
+		}
+		Assert.assertTrue(alertPresent);
 
 	}
 
 	@Test(priority = 12)
-	public void validateButton3onevenspelbergpage() throws InterruptedException {
+	public void validateButton3StevenSpelbergpage() {
+		boolean alertPresent = true;
+		ss.ssbutton3();
+		try {
+			driver.switchTo().alert().accept();
 
-		boolean buttonenable3 = ss.ssbutton3().isEnabled();
-		Assert.assertTrue(buttonenable3);
+		} catch (Exception e) {
+			alertPresent = false;
+
+		}
+		Assert.assertTrue(alertPresent);
 
 	}
 

@@ -68,17 +68,17 @@ public class Dr_Steven_Spielberg {
     {
     	return Title3;
     }
-    public WebElement ssbutton1()
+    public void ssbutton1()
     {
-    	return button1;
+     button1.click();
     }
-    public WebElement ssbutton2()
+    public void ssbutton2()
     {
-    	return button2;
+    	 button2.click();
     }
-    public WebElement ssbutton3()
+    public void ssbutton3()
     {
-    	return button3;
+    	 button3.click();
     }
     public WebElement ssDesp1()
     {
