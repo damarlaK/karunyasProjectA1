@@ -58,7 +58,9 @@ public class DrTS_Test {
 	public void validateTitle1TomShortPage() {
 		boolean titlePresent = true;
 		int titleLength = ts.tsTitle1().getText().length();
-		if(titleLength<6) {
+		System.out.println(titleLength);		
+		
+		if(titleLength<8) {
 			titlePresent = false;
 		}
 		
@@ -71,7 +73,7 @@ public class DrTS_Test {
 
 			boolean titlePresent = true;
 			int titleLength = ts.tsTitle2().getText().length();
-			if(titleLength<6) {
+			if(titleLength<8) {
 				titlePresent = false;
 			}
 			
@@ -83,7 +85,7 @@ public class DrTS_Test {
 	public void validateTitle3TomShortPage() {
 			boolean titlePresent = true;
 			int titleLength = ts.tsTitle3().getText().length();
-			if(titleLength<6) {
+			if(titleLength<8) {
 				titlePresent = false;
 			}
 			
@@ -126,7 +128,7 @@ public class DrTS_Test {
 
 	}
 	@Test(priority = 7)
-	public void validateCreate1TimShortpage() throws InterruptedException {
+	public void validateCreate1TimShortpage()  {
 
 		boolean createDate = ts.tsCreate1().getText().contains("GMT");
 		Assert.assertTrue(createDate);

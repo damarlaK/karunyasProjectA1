@@ -1,57 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="10" failed="3" skipped="0">
+<testng-results ignored="0" total="13" passed="7" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-01-09T00:43:08Z" name="Default suite" finished-at="2019-01-09T00:43:26Z" duration-ms="18221">
+  <suite started-at="2019-01-10T04:30:16Z" name="Default suite" finished-at="2019-01-10T04:30:31Z" duration-ms="15368">
     <groups>
     </groups>
-    <test started-at="2019-01-09T00:43:08Z" name="Default test" finished-at="2019-01-09T00:43:26Z" duration-ms="18221">
-      <class name="com.Whitecirclesschool.demo.TestScripts.DrSS_Test">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:08Z" name="openBrowser" finished-at="2019-01-09T00:43:14Z" duration-ms="5817" status="PASS">
+    <test started-at="2019-01-10T04:30:16Z" name="Default test" finished-at="2019-01-10T04:30:31Z" duration-ms="15368">
+      <class name="com.Whitecirclesschool.demo.TestScripts.DrTS_Test">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:16Z" name="openBrowser" finished-at="2019-01-10T04:30:21Z" duration-ms="5830" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="DoctorsListValidatio()[pri:0, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:14Z" name="DoctorsListValidatio" finished-at="2019-01-09T00:43:25Z" duration-ms="11423" status="PASS">
+        <test-method signature="DoctorsListValidatio()[pri:0, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:22Z" name="DoctorsListValidatio" finished-at="2019-01-10T04:30:30Z" duration-ms="8553" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DoctorsListValidatio -->
-        <test-method signature="validateTitle1Stevenspelbergpage()[pri:1, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:25Z" name="validateTitle1Stevenspelbergpage" finished-at="2019-01-09T00:43:25Z" duration-ms="61" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateTitle1Stevenspelbergpage -->
-        <test-method signature="validateTitle2Stevenspelbergpage()[pri:2, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:25Z" name="validateTitle2Stevenspelbergpage" finished-at="2019-01-09T00:43:25Z" duration-ms="62" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateTitle2Stevenspelbergpage -->
-        <test-method signature="validateTitle3Stevenspelbergpage()[pri:3, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:25Z" name="validateTitle3Stevenspelbergpage" finished-at="2019-01-09T00:43:25Z" duration-ms="40" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateTitle3Stevenspelbergpage -->
-        <test-method signature="validateDesp1Stevenspelbergpage()[pri:4, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:25Z" name="validateDesp1Stevenspelbergpage" finished-at="2019-01-09T00:43:25Z" duration-ms="38" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateDesp1Stevenspelbergpage -->
-        <test-method signature="validateDesp2Stevenspelbergpage()[pri:5, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:25Z" name="validateDesp2Stevenspelbergpage" finished-at="2019-01-09T00:43:25Z" duration-ms="49" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateDesp2Stevenspelbergpage -->
-        <test-method signature="validateDesp3onevenspelbergpage()[pri:6, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:25Z" name="validateDesp3onevenspelbergpage" finished-at="2019-01-09T00:43:25Z" duration-ms="51" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateDesp3onevenspelbergpage -->
-        <test-method signature="validateCreate1Stevenspelbergpage()[pri:7, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:25Z" name="validateCreate1Stevenspelbergpage" finished-at="2019-01-09T00:43:25Z" duration-ms="54" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateCreate1Stevenspelbergpage -->
-        <test-method signature="validateCreate2Stevenspelbergpage()[pri:8, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:25Z" name="validateCreate2Stevenspelbergpage" finished-at="2019-01-09T00:43:26Z" duration-ms="52" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateCreate2Stevenspelbergpage -->
-        <test-method signature="validateCreate3Stevenspelbergpage()[pri:9, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:26Z" name="validateCreate3Stevenspelbergpage" finished-at="2019-01-09T00:43:26Z" duration-ms="43" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateCreate3Stevenspelbergpage -->
-        <test-method signature="validateButton1StevenSpelbergpage()[pri:10, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:26Z" name="validateButton1StevenSpelbergpage" finished-at="2019-01-09T00:43:26Z" duration-ms="114" status="FAIL">
+        <test-method signature="validateTitle1TomShortPage()[pri:1, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:30Z" name="validateTitle1TomShortPage" finished-at="2019-01-10T04:30:30Z" duration-ms="47" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -62,7 +26,7 @@ at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertTrue(Assert.java:44)
 at org.testng.Assert.assertTrue(Assert.java:54)
-at com.Whitecirclesschool.demo.TestScripts.DrSS_Test.validateButton1StevenSpelbergpage(DrSS_Test.java:172)
+at com.Whitecirclesschool.demo.TestScripts.DrTS_Test.validateTitle1TomShortPage(DrTS_Test.java:67)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -93,8 +57,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateButton1StevenSpelbergpage -->
-        <test-method signature="validateButton2StevenSpelbergpage()[pri:11, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:26Z" name="validateButton2StevenSpelbergpage" finished-at="2019-01-09T00:43:26Z" duration-ms="127" status="FAIL">
+        </test-method> <!-- validateTitle1TomShortPage -->
+        <test-method signature="validateTitle2TomShortPage()[pri:2, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:30Z" name="validateTitle2TomShortPage" finished-at="2019-01-10T04:30:30Z" duration-ms="42" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -105,7 +69,7 @@ at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertTrue(Assert.java:44)
 at org.testng.Assert.assertTrue(Assert.java:54)
-at com.Whitecirclesschool.demo.TestScripts.DrSS_Test.validateButton2StevenSpelbergpage(DrSS_Test.java:187)
+at com.Whitecirclesschool.demo.TestScripts.DrTS_Test.validateTitle2TomShortPage(DrTS_Test.java:80)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -136,8 +100,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateButton2StevenSpelbergpage -->
-        <test-method signature="validateButton3StevenSpelbergpage()[pri:12, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:26Z" name="validateButton3StevenSpelbergpage" finished-at="2019-01-09T00:43:26Z" duration-ms="133" status="FAIL">
+        </test-method> <!-- validateTitle2TomShortPage -->
+        <test-method signature="validateTitle3TomShortPage()[pri:3, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:30Z" name="validateTitle3TomShortPage" finished-at="2019-01-10T04:30:30Z" duration-ms="44" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -148,7 +112,7 @@ at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertTrue(Assert.java:44)
 at org.testng.Assert.assertTrue(Assert.java:54)
-at com.Whitecirclesschool.demo.TestScripts.DrSS_Test.validateButton3StevenSpelbergpage(DrSS_Test.java:202)
+at com.Whitecirclesschool.demo.TestScripts.DrTS_Test.validateTitle3TomShortPage(DrTS_Test.java:92)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -179,12 +143,165 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateButton3StevenSpelbergpage -->
-        <test-method is-config="true" signature="close()[pri:0, instance:com.Whitecirclesschool.demo.TestScripts.DrSS_Test@291b4bf5]" started-at="2019-01-09T00:43:26Z" name="close" finished-at="2019-01-09T00:43:26Z" duration-ms="87" status="PASS">
+        </test-method> <!-- validateTitle3TomShortPage -->
+        <test-method signature="validateDesp1TimShortPage()[pri:4, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:30Z" name="validateDesp1TimShortPage" finished-at="2019-01-10T04:30:30Z" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDesp1TimShortPage -->
+        <test-method signature="validateDesp2TimShortpage()[pri:5, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:30Z" name="validateDesp2TimShortpage" finished-at="2019-01-10T04:30:30Z" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDesp2TimShortpage -->
+        <test-method signature="validateDesp3TimShortgpage()[pri:6, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:30Z" name="validateDesp3TimShortgpage" finished-at="2019-01-10T04:30:30Z" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDesp3TimShortgpage -->
+        <test-method signature="validateCreate1TimShortpage()[pri:7, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:30Z" name="validateCreate1TimShortpage" finished-at="2019-01-10T04:30:30Z" duration-ms="21" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.Whitecirclesschool.demo.TestScripts.DrTS_Test.validateCreate1TimShortpage(DrTS_Test.java:134)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCreate1TimShortpage -->
+        <test-method signature="validateCreate2TimShortpage()[pri:8, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:30Z" name="validateCreate2TimShortpage" finished-at="2019-01-10T04:30:30Z" duration-ms="36" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.Whitecirclesschool.demo.TestScripts.DrTS_Test.validateCreate2TimShortpage(DrTS_Test.java:143)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCreate2TimShortpage -->
+        <test-method signature="validateCreate3TimShortpage()[pri:9, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:30Z" name="validateCreate3TimShortpage" finished-at="2019-01-10T04:30:30Z" duration-ms="45" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.Whitecirclesschool.demo.TestScripts.DrTS_Test.validateCreate3TimShortpage(DrTS_Test.java:152)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCreate3TimShortpage -->
+        <test-method signature="validateButton1TimShortpage()[pri:10, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:30Z" name="validateButton1TimShortpage" finished-at="2019-01-10T04:30:31Z" duration-ms="72" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateButton1TimShortpage -->
+        <test-method signature="validateButton2TimShortpage()[pri:11, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:31Z" name="validateButton2TimShortpage" finished-at="2019-01-10T04:30:31Z" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateButton2TimShortpage -->
+        <test-method signature="validateButton3TimShortpage()[pri:12, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:31Z" name="validateButton3TimShortpage" finished-at="2019-01-10T04:30:31Z" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateButton3TimShortpage -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.Whitecirclesschool.demo.TestScripts.DrTS_Test@57250572]" started-at="2019-01-10T04:30:31Z" name="close" finished-at="2019-01-10T04:30:31Z" duration-ms="323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.Whitecirclesschool.demo.TestScripts.DrSS_Test -->
+      </class> <!-- com.Whitecirclesschool.demo.TestScripts.DrTS_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
