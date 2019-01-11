@@ -6,9 +6,9 @@
 </listeners>
 
   <test thread-count="5" name="Test">
-    <classes>
-      <class name="com.Whitecirclesschool.demo.TestScripts.DrList_Test"/>
-    </classes>
+    <packages>
+    	<package name="com.Whitecirclesschool.demo.TestScripts"></package>
+    </packages>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
 

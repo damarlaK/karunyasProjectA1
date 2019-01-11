@@ -15,9 +15,8 @@ import com.Whitecirclesschool.demo.ProjectA1.Pages.Login_Page;
 import com.Whitecirclesschool.demo.ProjectA1.Pages.Projects;
 import com.Whitecirclesschool.demo.ProjectA1.Pages.Welcome_Page;
 
-public class DrSS_Test {
+public class DrSS_Test extends BaseTest {
 
-	private WebDriver driver;
 	private Login_Page lp;
 	private Welcome_Page wp;
 	private Projects pA1;
@@ -25,187 +24,89 @@ public class DrSS_Test {
 	private Dr_Steven_Spielberg ss;
 	private String actual;
 	private String expected;
+	private CommonControls cc;
 
-	@BeforeTest
-	public void openBrowser() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://demo.whitecircleschool.com/");
-	}
+	@Test()
+	public void DoctorsListValidatioN() throws InterruptedException {
 
-	@Test(priority = 0)
-	public void DoctorsListValidatio() throws InterruptedException {
 		lp = new Login_Page(driver);
 		wp = new Welcome_Page(driver);
 		pA1 = new Projects(driver);
 		dL = new Doctors_Lists(driver);
 		ss = new Dr_Steven_Spielberg(driver);
+		cc = new CommonControls();
 		Thread.sleep(3000);
 		lp.applicationlogin();
 		wp.LetsBtn();
 		pA1.ProjA1();
-
 		dL.clDrStevenSpieberg();
 		Thread.sleep(3000);
 		// Verify Steven page
 		actual = ss.DrStevenSpielberglink().getText();
 		expected = "Dr Steven Spielberg";
 		Assert.assertEquals(actual, expected);
-
 	}
 
-	@Test(priority = 1)
-	public void validateTitle1Stevenspelbergpage() throws InterruptedException {
-
-		boolean titlePresent = true;
-		int titleLength = ss.ssTitle1().getText().length();
-		if (titleLength < 6) {
-			titlePresent = false;
-		}
-
-		Assert.assertTrue(titlePresent);
-
+	@Test(dependsOnMethods="DoctorsListValidatioN", alwaysRun=true)
+	public void validateTitle1Stevenspelbergpage() {
+		Assert.assertTrue(cc.verifyTitle(ss.ssTitle1()));
 	}
 
-	@Test(priority = 2)
-	public void validateTitle2Stevenspelbergpage() throws InterruptedException {
+	@Test(dependsOnMethods="validateTitle1Stevenspelbergpage",alwaysRun=true)
+	public void validateTitle2Stevenspelbergpage(){
+		Assert.assertTrue(cc.verifyTitle(ss.ssTitle2()));	}
 
-		boolean titlePresent = true;
-		int titleLength = ss.ssTitle2().getText().length();
-		if (titleLength < 6) {
-			titlePresent = false;
-		}
-
-		Assert.assertTrue(titlePresent);
-
+	@Test(dependsOnMethods="validateTitle2Stevenspelbergpage",alwaysRun=true)
+	public void validateTitle3Stevenspelbergpage()  {
+		Assert.assertTrue(cc.verifyTitle(ss.ssTitle3()));
 	}
 
-	@Test(priority = 3)
-	public void validateTitle3Stevenspelbergpage() throws InterruptedException {
-
-		boolean titlePresent = true;
-		int titleLength = ss.ssTitle3().getText().length();
-		if (titleLength < 6) {
-			titlePresent = false;
-		}
-
-		Assert.assertTrue(titlePresent);
-
-	}
-
-	@Test(priority = 4)
+	@Test(dependsOnMethods="validateTitle3Stevenspelbergpage",alwaysRun=true)
 	public void validateDesp1Stevenspelbergpage() {
-
-		boolean DescriptionPresent = true;
-		int DescriptionLength = ss.ssDesp1().getText().length();
-		if (DescriptionLength < 14) {
-			DescriptionPresent = false;
-		}
-
-		Assert.assertTrue(DescriptionPresent);
-
+		Assert.assertTrue(cc.verifyDescription(ss.ssDesp1()));
 	}
 
-	@Test(priority = 5)
+	@Test(dependsOnMethods="validateDesp1Stevenspelbergpage",alwaysRun=true)
 	public void validateDesp2Stevenspelbergpage() {
-
-		boolean DescriptionPresent = true;
-		int DescriptionLength = ss.ssDesp2().getText().length();
-		if (DescriptionLength < 14) {
-			DescriptionPresent = false;
-		}
-
-		Assert.assertTrue(DescriptionPresent);
-
+		Assert.assertTrue(cc.verifyDescription(ss.ssDesp2()));
 	}
 
-	@Test(priority = 6)
+	@Test(dependsOnMethods="validateDesp2Stevenspelbergpage",alwaysRun=true)
 	public void validateDesp3onevenspelbergpage() {
+		Assert.assertTrue(cc.verifyDescription(ss.ssDesp3()));	}
 
-		boolean DescriptionPresent = true;
-		int DescriptionLength = ss.ssDesp3().getText().length();
-		if (DescriptionLength < 14) {
-			DescriptionPresent = false;
-		}
-
-		Assert.assertTrue(DescriptionPresent);
-
-	}
-
-	@Test(priority = 7)
+	@Test(dependsOnMethods="validateDesp3onevenspelbergpage",alwaysRun=true)
 	public void validateCreate1Stevenspelbergpage() {
-
-		boolean createDate = ss.ssCreate1().getText().contains("GMT");
-		Assert.assertTrue(createDate);
-
+		Assert.assertTrue(cc.verifyCreatedDate(ss.ssCreate1()));
 	}
 
-	@Test(priority = 8)
+	@Test(dependsOnMethods="validateCreate1Stevenspelbergpage",alwaysRun=true)
 	public void validateCreate2Stevenspelbergpage() {
-
-		boolean createDate = ss.ssCreate2().getText().contains("GMT");
-		Assert.assertTrue(createDate);
-
+		Assert.assertTrue(cc.verifyCreatedDate(ss.ssCreate2()));
 	}
 
-	@Test(priority = 9)
+	@Test(dependsOnMethods="validateCreate2Stevenspelbergpage",alwaysRun=true)
 	public void validateCreate3Stevenspelbergpage() {
 
-		boolean createDate = ss.ssCreate3().getText().contains("GMT");
-		Assert.assertTrue(createDate);
-
+		Assert.assertTrue(cc.verifyCreatedDate(ss.ssCreate3()));
 	}
 
-	@Test(priority = 10)
+	@Test(dependsOnMethods="validateCreate3Stevenspelbergpage",alwaysRun=true)
 	public void validateButton1StevenSpelbergpage() {
-		boolean alertPresent = true;
 		ss.ssbutton1();
-		try {
-			driver.switchTo().alert().accept();
-
-		} catch (Exception e) {
-			alertPresent = false;
-
+		Assert.assertTrue(cc.verifyUpvoteButton(driver));
 		}
-		Assert.assertTrue(alertPresent);
 
-	}
-
-	@Test(priority = 11)
+	@Test(dependsOnMethods="validateButton1StevenSpelbergpage",alwaysRun=true)
 	public void validateButton2StevenSpelbergpage() {
-		boolean alertPresent = true;
 		ss.ssbutton2();
-		try {
-			driver.switchTo().alert().accept();
-
-		} catch (Exception e) {
-			alertPresent = false;
-
-		}
-		Assert.assertTrue(alertPresent);
-
+		Assert.assertTrue(cc.verifyUpvoteButton(driver));
 	}
 
-	@Test(priority = 12)
+	@Test(dependsOnMethods="validateButton2StevenSpelbergpage",alwaysRun=true)
 	public void validateButton3StevenSpelbergpage() {
-		boolean alertPresent = true;
 		ss.ssbutton3();
-		try {
-			driver.switchTo().alert().accept();
-
-		} catch (Exception e) {
-			alertPresent = false;
-
-		}
-		Assert.assertTrue(alertPresent);
-
-	}
-
-	@AfterTest
-	public void close() {
-		driver.close();
+		Assert.assertTrue(cc.verifyUpvoteButton(driver));
 	}
 
 }

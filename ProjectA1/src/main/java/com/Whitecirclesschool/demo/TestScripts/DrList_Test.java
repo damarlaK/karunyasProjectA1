@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 
 import com.Whitecirclesschool.demo.ProjectA1.Pages.*;
 
-public class DrList_Test {
-	private WebDriver driver;
+public class DrList_Test extends BaseTest {
+
 	private Login_Page lp;
 	private Welcome_Page wp;
 	private Projects pA1;
@@ -23,17 +23,8 @@ public class DrList_Test {
 	private String actual;
 	private String expected;
 
-	@BeforeTest
-	public void openBrowser() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://demo.whitecircleschool.com/");
-	}
-
-	@Test(priority = 0)
-	public void DoctorsListValidatio() throws InterruptedException {
+	@Test()
+	public void DoctorsListValidatioN() throws InterruptedException {
 		lp = new Login_Page(driver);
 		wp = new Welcome_Page(driver);
 		pA1 = new Projects(driver);
@@ -49,7 +40,7 @@ public class DrList_Test {
 
 	}
 
-	@Test(priority = 1)
+	@Test(dependsOnMethods = "DoctorsListValidatioN", alwaysRun = true)
 	public void validatelinktext() throws InterruptedException {
 		ss = new Dr_Steven_Spielberg(driver);
 		ts = new DR_Tim_Short(driver);
@@ -57,7 +48,6 @@ public class DrList_Test {
 
 		dL.clDrStevenSpieberg();
 
-		
 		Thread.sleep(3000);
 
 		// Verify Steven page
@@ -72,15 +62,10 @@ public class DrList_Test {
 		expected = "Dr Tim Short";
 		Assert.assertEquals(actual, expected);
 		driver.navigate().back();
-		
+
 		dL.clDrJames();
-		driver.navigate().back();		
+		driver.navigate().back();
 
-	}
-
-	@AfterTest
-	public void close() {
-		driver.close();
 	}
 
 }

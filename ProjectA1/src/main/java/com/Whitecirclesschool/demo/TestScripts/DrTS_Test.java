@@ -11,13 +11,12 @@ import org.testng.annotations.Test;
 
 import com.Whitecirclesschool.demo.ProjectA1.Pages.DR_Tim_Short;
 import com.Whitecirclesschool.demo.ProjectA1.Pages.Doctors_Lists;
-import com.Whitecirclesschool.demo.ProjectA1.Pages.Dr_Steven_Spielberg;
 import com.Whitecirclesschool.demo.ProjectA1.Pages.Login_Page;
 import com.Whitecirclesschool.demo.ProjectA1.Pages.Projects;
 import com.Whitecirclesschool.demo.ProjectA1.Pages.Welcome_Page;
 
-public class DrTS_Test {
-	private WebDriver driver;
+public class DrTS_Test extends BaseTest {
+
 	private Login_Page lp;
 	private Welcome_Page wp;
 	private Projects pA1;
@@ -25,23 +24,16 @@ public class DrTS_Test {
 	private DR_Tim_Short ts;
 	private String actual;
 	private String expected;
+	private CommonControls cc;
 
-	@BeforeTest
-	public void openBrowser() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://demo.whitecircleschool.com/");
-	}
-
-	@Test(priority = 0)
-	public void DoctorsListValidatio() throws InterruptedException {
+	@Test()
+	public void DoctorsListValidatioN() throws InterruptedException {
 		lp = new Login_Page(driver);
 		wp = new Welcome_Page(driver);
 		pA1 = new Projects(driver);
 		dL = new Doctors_Lists(driver);
-		ts = new DR_Tim_Short(driver);	
+		ts = new DR_Tim_Short(driver);
+		cc = new CommonControls();
 		Thread.sleep(3000);
 		lp.applicationlogin();
 		wp.LetsBtn();
@@ -54,157 +46,67 @@ public class DrTS_Test {
 
 	}
 
-	@Test(priority = 1)
+	@Test(dependsOnMethods ="DoctorsListValidatioN",alwaysRun = true)
 	public void validateTitle1TomShortPage() {
-		boolean titlePresent = true;
-		int titleLength = ts.tsTitle1().getText().length();
-		System.out.println(titleLength);		
-		
-		if(titleLength<8) {
-			titlePresent = false;
-		}
-		
-		Assert.assertTrue(titlePresent);
-
+		Assert.assertTrue(cc.verifyTitle(ts.tsTitle1()));
 	}
 
-	@Test(priority = 2)
+	@Test(dependsOnMethods="validateTitle1TomShortPage",alwaysRun = true )
 	public void validateTitle2TomShortPage() {
+		Assert.assertTrue(cc.verifyTitle(ts.tsTitle2()));
+	}
 
-			boolean titlePresent = true;
-			int titleLength = ts.tsTitle2().getText().length();
-			if(titleLength<8) {
-				titlePresent = false;
-			}
-			
-			Assert.assertTrue(titlePresent);
-
-			}
-
-	@Test(priority = 3)
+	/*@Test(dependsOnMethods = "validateTitle2TomShortPage",alwaysRun = true)
 	public void validateTitle3TomShortPage() {
-			boolean titlePresent = true;
-			int titleLength = ts.tsTitle3().getText().length();
-			if(titleLength<8) {
-				titlePresent = false;
-			}
-			
-			Assert.assertTrue(titlePresent);
+		Assert.assertTrue(cc.verifyTitle(ts.tsTitle3()));
+	}
 
-		}
-
-	@Test(priority = 4)
+	@Test(dependsOnMethods = "validateTitle3TomShortPage",alwaysRun = true)
 	public void validateDesp1TimShortPage() {
-
-		boolean DescriptionPresent = true;
-		int Descriptionlength = ts.tsDesp1().getText().length();
-		if(Descriptionlength<14) {
-			DescriptionPresent = false;
-		}
-		Assert.assertTrue(DescriptionPresent);
-
+		Assert.assertTrue(cc.verifyDescription(ts.tsDesp1()));
 	}
 
-	@Test(priority = 5)
-	public void validateDesp2TimShortpage() throws InterruptedException {
-
-		boolean DescriptionPresent = true;
-		int Descriptionlength = ts.tsDesp2().getText().length();
-		if(Descriptionlength<14) {
-			DescriptionPresent = false;
-		}
-		Assert.assertTrue(DescriptionPresent);
-
-	}
-	@Test(priority = 6)
-	public void validateDesp3TimShortgpage() throws InterruptedException {
-
-		boolean DescriptionPresent = true;
-		int Descriptionlength = ts.tsDesp3().getText().length();
-		if(Descriptionlength<14) {
-			DescriptionPresent = false;
-		}
-		Assert.assertTrue(DescriptionPresent);
-
-	}
-	@Test(priority = 7)
-	public void validateCreate1TimShortpage()  {
-
-		boolean createDate = ts.tsCreate1().getText().contains("GMT");
-		Assert.assertTrue(createDate);
-
+	@Test(dependsOnMethods = "validateDesp1TimShortPage",alwaysRun = true)
+	public void validateDesp2TimShortpage() {
+		Assert.assertTrue(cc.verifyDescription(ts.tsDesp2()));
 	}
 
-
-	@Test(priority = 8)
-	public void validateCreate2TimShortpage() throws InterruptedException {
-
-		boolean createDate = ts.tsCreate2().getText().contains("GMT");
-		Assert.assertTrue(createDate);
-
+	@Test(dependsOnMethods = "validateDesp2TimShortpage",alwaysRun = true)
+	public void validateDesp3TimShortgpage() {
+		Assert.assertTrue(cc.verifyDescription(ts.tsDesp3()));
 	}
 
-
-	@Test(priority = 9)
-	public void validateCreate3TimShortpage() throws InterruptedException {
-
-		boolean createDate = ts.tsCreate3().getText().contains("GMT");
-		Assert.assertTrue(createDate);
-
+	@Test(dependsOnMethods = "validateDesp3TimShortgpage",alwaysRun = true)
+	public void validateCreate1TimShortpage() {
+		Assert.assertTrue(cc.verifyCreatedDate(ts.tsCreate1()));
 	}
 
+	@Test(dependsOnMethods = "validateCreate1TimShortpage",alwaysRun = true)
+	public void validateCreate2TimShortpage() {
+		Assert.assertTrue(cc.verifyCreatedDate(ts.tsCreate2()));
+	}
 
-	@Test(priority = 10)
-	public void validateButton1TimShortpage()  {
+	@Test(dependsOnMethods = "validateCreate2TimShortpage",alwaysRun = true)
+	public void validateCreate3TimShortpage() {
+		Assert.assertTrue(cc.verifyCreatedDate(ts.tsCreate3()));
+	}
 
-			boolean alertPresent = true;
-			ts.tsbutton1();
-			try {
-				driver.switchTo().alert().accept();
+	@Test(dependsOnMethods = "validateCreate3TimShortpage",alwaysRun = true)
+	public void validateButton1TimShortpage() {
+		ts.tsbutton1();
+		Assert.assertTrue(cc.verifyUpvoteButton(driver));
+	}
 
-			} catch (Exception e) {
-				alertPresent = false;
+	@Test(dependsOnMethods = "validateButton1TimShortpage",alwaysRun = true)
+	public void validateButton2TimShortpage() {
+		ts.tsbutton2();
+		Assert.assertTrue(cc.verifyUpvoteButton(driver));
+	}
 
-			}
-			Assert.assertTrue(alertPresent);
-
-		}
-
-	@Test(priority = 11)
-	public void validateButton2TimShortpage() 
-	{
-		
-			boolean alertPresent = true;
-			ts.tsbutton1();
-			try {
-				driver.switchTo().alert().accept();
-
-			} catch (Exception e) {
-				alertPresent = false;
-
-			}
-			Assert.assertTrue(alertPresent);
-
-		}
-	
-
-	@Test(priority = 12)
+	@Test(dependsOnMethods = "validateButton2TimShortpage",alwaysRun = true)
 	public void validateButton3TimShortpage() {
-			boolean alertPresent = true;
-			ts.tsbutton1();
-			try {
-				driver.switchTo().alert().accept();
-
-			} catch (Exception e) {
-				alertPresent = false;
-
-			}
-			Assert.assertTrue(alertPresent);
-
-		}
-
-	@AfterTest
-	public void close() {
-		driver.close();
+		ts.tsbutton3();
+		Assert.assertTrue(cc.verifyUpvoteButton(driver));
 	}
+*/
 }

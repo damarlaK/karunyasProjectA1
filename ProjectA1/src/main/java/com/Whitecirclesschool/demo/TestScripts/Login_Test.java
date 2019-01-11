@@ -12,19 +12,9 @@ import org.testng.annotations.Test;
 import com.Whitecirclesschool.demo.ProjectA1.Pages.Login_Page;
 import com.Whitecirclesschool.demo.ProjectA1.Pages.Welcome_Page;
 
-public class Login_Test {
+public class Login_Test extends BaseTest {
 
-	WebDriver driver;
-
-	@BeforeTest
-	public void openBrowser() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://demo.whitecircleschool.com/");
-	}
-
+	
 	@Test
 	public void logininformation() {
 		Login_Page lp = new Login_Page(driver);
@@ -32,11 +22,6 @@ public class Login_Test {
 		lp.applicationlogin();
 		boolean logoutStatus = wp.getLogout().isDisplayed();
 		Assert.assertTrue(logoutStatus);
-	}
-
-	@AfterTest
-	public void close() {
-		driver.close();
 	}
 
 }

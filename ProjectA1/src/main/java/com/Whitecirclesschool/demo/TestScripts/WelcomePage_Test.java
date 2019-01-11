@@ -13,35 +13,18 @@ import com.Whitecirclesschool.demo.ProjectA1.Pages.Login_Page;
 import com.Whitecirclesschool.demo.ProjectA1.Pages.Projects;
 import com.Whitecirclesschool.demo.ProjectA1.Pages.Welcome_Page;
 
-public class WelcomePage_Test {
-	private WebDriver driver;
+public class WelcomePage_Test extends BaseTest {
+
 	private Login_Page lp;
 	private Welcome_Page wp;
 	private Projects pA1;
 
-	@BeforeTest
-	public void openBrowser() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://demo.whitecircleschool.com/");
-	}
-
-	@Test(priority=0)
-	public void logininformation() throws InterruptedException {
+	@Test(priority = 0)
+	public void verifyWelcomePage() throws InterruptedException {
 		lp = new Login_Page(driver);
 		wp = new Welcome_Page(driver);
 		Thread.sleep(3000);
 		lp.applicationlogin();
-		boolean logoutStatus = wp.getLogout().isDisplayed();
-		Assert.assertTrue(logoutStatus);
-
-	}
-
-	@Test(priority=1)
-	public void welcomeMessageValidation() throws InterruptedException {
-
 		String actualMessage = wp.getSuccessMessage().getText();
 		String expectedMessage = "Welcome to the Project";
 		Assert.assertEquals(actualMessage, expectedMessage);
@@ -49,22 +32,16 @@ public class WelcomePage_Test {
 
 	}
 
-	@Test(priority=2)
+	@Test(dependsOnMethods = "verifyWelcomePage",alwaysRun =true)
 	public void LetsWbtn() throws InterruptedException {
-
 		wp.LetsBtn();
 		Thread.sleep(3000);
-	}
+		}
 
-	@Test(priority=3)
-	public void prjectA1page() {
+	@Test(dependsOnMethods = "LetsWbtn", alwaysRun = true)
+	public void projectA1page() {
 		pA1 = new Projects(driver);
 		pA1.ProjA1();
-	}
-
-	@AfterTest
-	public void close() {
-		driver.close();
 	}
 
 }
