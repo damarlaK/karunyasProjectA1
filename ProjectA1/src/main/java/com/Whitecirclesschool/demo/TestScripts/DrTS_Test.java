@@ -1,12 +1,6 @@
 package com.Whitecirclesschool.demo.TestScripts;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.Whitecirclesschool.demo.ProjectA1.Pages.DR_Tim_Short;
@@ -56,12 +50,12 @@ public class DrTS_Test extends BaseTest {
 		Assert.assertTrue(cc.verifyTitle(ts.tsTitle2()));
 	}
 
-	/*@Test(dependsOnMethods = "validateTitle2TomShortPage",alwaysRun = true)
+	@Test(dependsOnMethods = "validateTitle2TomShortPage",alwaysRun = true)
 	public void validateTitle3TomShortPage() {
 		Assert.assertTrue(cc.verifyTitle(ts.tsTitle3()));
 	}
 
-	@Test(dependsOnMethods = "validateTitle3TomShortPage",alwaysRun = true)
+	/*@Test(dependsOnMethods = "validateTitle3TomShortPage",alwaysRun = true)
 	public void validateDesp1TimShortPage() {
 		Assert.assertTrue(cc.verifyDescription(ts.tsDesp1()));
 	}

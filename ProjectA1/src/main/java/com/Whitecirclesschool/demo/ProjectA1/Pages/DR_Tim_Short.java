@@ -19,7 +19,7 @@ public class DR_Tim_Short {
 	@FindBy(css = "body > div.elementor.elementor-156 > div > div > section.elementor-element.elementor-element-9fa6939.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default.elementor-section.elementor-top-section > div > div > div.elementor-element.elementor-element-7f0f48b.elementor-column.elementor-col-66.elementor-top-column > div > div > div > div > div > ul > li:nth-child(1)")
 	private WebElement Title2;
 
-	@FindBy(css = "body > div.elementor.elementor-156 > div > div > section.elementor-element.elementor-element-1465f62.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default.elementor-section.elementor-top-section > div > div > div.elementor-element.elementor-element-88a47de.elementor-column.elementor-col-33.elementor-top-column > div > div > div > div > button")
+	@FindBy(css = "body > div.elementor.elementor-156 > div > div > section.elementor-element.elementor-element-9fa6939.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default.elementor-section.elementor-top-section > div > div > div.elementor-element.elementor-element-7f0f48b.elementor-column.elementor-col-66.elementor-top-column > div > div > div > div > div > ul > li:nth-child(1)")
 	private WebElement Title3;
 
 	@FindBy(css = "body > div.elementor.elementor-156 > div > div > section.elementor-element.elementor-element-1465f62.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default.elementor-section.elementor-top-section > div > div > div.elementor-element.elementor-element-88a47de.elementor-column.elementor-col-33.elementor-top-column > div > div > div > div > button")

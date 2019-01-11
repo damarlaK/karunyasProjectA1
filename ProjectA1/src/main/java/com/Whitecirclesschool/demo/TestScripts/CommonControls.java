@@ -38,7 +38,8 @@ public class CommonControls {
 
 		boolean TitlePresent = true;
 		int Titlelength = Title.getText().length();
-		if (Titlelength < 7) {
+		System.out.println(Titlelength);
+		if (Titlelength < 8) {
 			TitlePresent = false;
 		}
 		return TitlePresent;
