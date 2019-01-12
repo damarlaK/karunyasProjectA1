@@ -1,24 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.Whitecirclesschool.demo.TestScripts.WelcomePage_Test">
+        <methods>
+          <include name="verifyWelcomePage"/>
+          <include name="openBrowser"/>
+          <include name="close"/>
+          <include name="LetsWbtn"/>
+          <include name="projectA1page"/>
+        </methods>
+      </class> <!-- com.Whitecirclesschool.demo.TestScripts.WelcomePage_Test -->
       <class name="com.Whitecirclesschool.demo.TestScripts.DrTS_Test">
         <methods>
           <include name="validateCreate1TimShortpage"/>
           <include name="validateCreate3TimShortpage"/>
-          <include name="validateTitle1TomShortPage"/>
           <include name="openBrowser"/>
-          <include name="DoctorsListValidatioN"/>
-          <include name="validateTitle2TomShortPage"/>
-          <include name="validateTitle3TomShortPage"/>
           <include name="close"/>
-          <include name="validateDesp1TimShortPage"/>
           <include name="validateDesp3TimShortgpage"/>
           <include name="validateCreate2TimShortpage"/>
           <include name="validateDesp2TimShortpage"/>
+          <include name="validateButton3TimShortpage"/>
+          <include name="validateTitle1TomShortPage"/>
+          <include name="DoctorsListValidatioN"/>
+          <include name="validateTitle2TomShortPage"/>
+          <include name="validateTitle3TomShortPage"/>
+          <include name="validateButton2TimShortpage"/>
+          <include name="validateButton1TimShortpage"/>
+          <include name="validateDesp1TimShortPage"/>
         </methods>
       </class> <!-- com.Whitecirclesschool.demo.TestScripts.DrTS_Test -->
+      <class name="com.Whitecirclesschool.demo.TestScripts.DrList_Test">
+        <methods>
+          <include name="DoctorsListValidatioN"/>
+          <include name="openBrowser"/>
+          <include name="close"/>
+          <include name="validatelinktext"/>
+        </methods>
+      </class> <!-- com.Whitecirclesschool.demo.TestScripts.DrList_Test -->
+      <class name="com.Whitecirclesschool.demo.TestScripts.DrSS_Test">
+        <methods>
+          <include name="validateCreate3Stevenspelbergpage"/>
+          <include name="openBrowser"/>
+          <include name="validateDesp3onevenspelbergpage"/>
+          <include name="validateTitle3Stevenspelbergpage"/>
+          <include name="close"/>
+          <include name="validateTitle1Stevenspelbergpage"/>
+          <include name="DoctorsListValidatioN"/>
+          <include name="validateTitle2Stevenspelbergpage"/>
+          <include name="validateDesp1Stevenspelbergpage"/>
+          <include name="validateButton1StevenSpelbergpage"/>
+          <include name="validateDesp2Stevenspelbergpage"/>
+          <include name="validateCreate1Stevenspelbergpage"/>
+          <include name="validateButton2StevenSpelbergpage"/>
+          <include name="validateCreate2Stevenspelbergpage"/>
+          <include name="validateButton3StevenSpelbergpage"/>
+        </methods>
+      </class> <!-- com.Whitecirclesschool.demo.TestScripts.DrSS_Test -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

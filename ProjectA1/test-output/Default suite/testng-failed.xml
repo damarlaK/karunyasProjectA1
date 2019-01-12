@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="com.Whitecirclesschool.demo.TestScripts.DrTS_Test">
@@ -8,11 +8,15 @@
           <include name="validateCreate1TimShortpage"/>
           <include name="validateCreate3TimShortpage"/>
           <include name="validateTitle1TomShortPage"/>
+          <include name="openBrowser"/>
+          <include name="DoctorsListValidatioN"/>
           <include name="validateTitle2TomShortPage"/>
           <include name="validateTitle3TomShortPage"/>
-          <include name="validateCreate2TimShortpage"/>
-          <include name="openBrowser"/>
           <include name="close"/>
+          <include name="validateDesp1TimShortPage"/>
+          <include name="validateDesp3TimShortgpage"/>
+          <include name="validateCreate2TimShortpage"/>
+          <include name="validateDesp2TimShortpage"/>
         </methods>
       </class> <!-- com.Whitecirclesschool.demo.TestScripts.DrTS_Test -->
     </classes>

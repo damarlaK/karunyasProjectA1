@@ -3,12 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-    	<class name="com.Whitecirlcesschool.demo.TestScripts.Login_Test"></class>
-    	<class name="com.Whitecirlcesschool.demo.TestScripts.WelcomePage_Test"></class>
-    	<class name="com.Whitecirlcesschool.demo.TestScripts.DrList_Test"></class>
-    	<class name="com.Whitecirlcesschool.demo.TestScripts.DrSS_Test"></class>
-    	<class name="com.Whitecirlcesschool.demo.TestScripts.DrTS_Test"></class>
-    	
+      <class name="com.Whitecirclesschool.demo.TestScripts.DrSS_Test"/>
+      <class name="com.Whitecirclesschool.demo.TestScripts.Login_Test"/>
+      <class name="com.Whitecirclesschool.demo.TestScripts.DrList_Test"/>
+      <class name="com.Whitecirclesschool.demo.TestScripts.DrTS_Test"/>
+      <class name="com.Whitecirclesschool.demo.TestScripts.WelcomePage_Test"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
