@@ -19,9 +19,9 @@ public class BaseTest {
 		driver.get("http://demo.whitecircleschool.com/");
 	}
 
-	/*@AfterClass
+	@AfterClass
 	public void close() {
 		driver.close();
-	}*/
+	}
 
 }

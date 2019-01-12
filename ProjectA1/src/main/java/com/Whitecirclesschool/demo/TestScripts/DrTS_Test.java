@@ -55,7 +55,7 @@ public class DrTS_Test extends BaseTest {
 		Assert.assertTrue(cc.verifyTitle(ts.tsTitle3()));
 	}
 
-	/*@Test(dependsOnMethods = "validateTitle3TomShortPage",alwaysRun = true)
+	@Test(dependsOnMethods = "validateTitle3TomShortPage",alwaysRun = true)
 	public void validateDesp1TimShortPage() {
 		Assert.assertTrue(cc.verifyDescription(ts.tsDesp1()));
 	}
@@ -102,5 +102,5 @@ public class DrTS_Test extends BaseTest {
 		ts.tsbutton3();
 		Assert.assertTrue(cc.verifyUpvoteButton(driver));
 	}
-*/
+
 }

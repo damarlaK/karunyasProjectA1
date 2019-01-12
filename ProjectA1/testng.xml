@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<listeners>
-<listener class-name="com.Listener.TestListener"></listener>
-</listeners>
-
   <test thread-count="5" name="Test">
-    <packages>
-    	<package name="com.Whitecirclesschool.demo.TestScripts"></package>
-    </packages>
+    <classes>
+    	<class name="com.Whitecirlcesschool.demo.TestScripts.Login_Test"></class>
+    	<class name="com.Whitecirlcesschool.demo.TestScripts.WelcomePage_Test"></class>
+    	<class name="com.Whitecirlcesschool.demo.TestScripts.DrList_Test"></class>
+    	<class name="com.Whitecirlcesschool.demo.TestScripts.DrSS_Test"></class>
+    	<class name="com.Whitecirlcesschool.demo.TestScripts.DrTS_Test"></class>
+    	
+    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
-
